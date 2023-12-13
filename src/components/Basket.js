@@ -24,7 +24,7 @@ export default function Basket(props) {
             </div>
 
             <div className="col-2 text-right">
-              {item.qty} x &#8358;{item.price.toFixed(2)}
+              {item.qty} x &#8358;{typeof item.price === 'number' ? item.price.toFixed(2) : 'Invalid Price'}
             </div>
           </div>
         ))}
